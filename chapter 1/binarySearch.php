@@ -10,7 +10,6 @@
  * иначе если названное число велико, то обновляется $high
  * Время выполнения: O(log n). Функция возвращает: bool | float
  */
-
 function binarySearch(array $arr, int $item)
 {
     $low = 0;

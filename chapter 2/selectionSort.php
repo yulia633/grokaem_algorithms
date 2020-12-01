@@ -4,7 +4,6 @@
 /**
  * Функция нахождения поиска наименьшего элемента в массиве.
  */
-
 function findSmallestIndex(array $arr)
 {
     $smallestNumber = $arr[0];
@@ -26,7 +25,6 @@ function findSmallestIndex(array $arr)
  *  и добавляем в отсортированный массив sortedArray, при этом удаляя элемент из общего массива
  *  Время выполнения: O(n x n). Функция возвращает: array.
  */
-
 function selectionSort(array $arr)
 {
     $sortedArray = [];
