@@ -9,7 +9,7 @@
  * Находим средний элемент изначального массива и сравниваем его с искомым
  * элементом в левой или правой границе массива, рекурсивно сокращая массив,
  * пока не найден искомый элемент или массив не станет пустым.
- * Время выполнения: O(log n). Функция возвращает: [] | float
+ * Время выполнения: O(log n). Функция возвращает: [] | int
  */
 function binarySearchRecursion(array $array, int $item, $start = 0)
 {
@@ -21,7 +21,7 @@ function binarySearchRecursion(array $array, int $item, $start = 0)
 
     $end = $length === 1 ? $start : $start + $length;
     //середина области поиска
-    $middle = floor(($start + $end) / 2);
+    $middle = (int) floor(($start + $end) / 2);
 
     $guess = $array[$middle];
 

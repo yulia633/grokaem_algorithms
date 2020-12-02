@@ -8,7 +8,7 @@
  * Каждый раз алгоритм проверяет средний элемент $middle. Если названное
  * число мало, то $low обновляется: $guess < $item --> $low = $middle + 1,
  * иначе если названное число велико, то обновляется $high
- * Время выполнения: O(log n). Функция возвращает: bool | float
+ * Время выполнения: O(log n). Функция возвращает: bool | int
  */
 function binarySearch(array $arr, int $item)
 {
@@ -17,7 +17,7 @@ function binarySearch(array $arr, int $item)
 
     while ($low <= $high) {
 
-        $middle = floor(($low + $high) / 2);
+        $middle = (int) floor(($low + $high) / 2);
         $guess = $arr[$middle];
 
         if ($guess === $item) {
