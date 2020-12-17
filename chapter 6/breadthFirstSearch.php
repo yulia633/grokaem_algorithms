@@ -16,7 +16,7 @@ use Ds\Queue;
  * Время выполнения: O(V + E), где V - это количество вершин, а E -
  * это количество ребер.
  */
-function search($graph, $name, $specialty) // array string string
+function search(array $graph, string $name, string $specialty)
 {
     $searched = [];
     $queue = new Queue();
