@@ -1,0 +1,13 @@
+{
+    "name": "julbel/grochem-algorithms",
+    "description": "Tasks from the book in PHP",
+    "authors": [
+        {
+            "name": "yulia633",
+            "email": "ignat633yulia@yandex.ru"
+        }
+    ],    
+    "require": {
+        "php-ds/php-ds": "^1.3"
+    }
+}
