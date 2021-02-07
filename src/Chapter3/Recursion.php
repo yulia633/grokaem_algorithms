@@ -135,6 +135,5 @@ class Recursion
             $newArray = array_slice($array, $length / 2, null, true);
             return $this->binarySearchRecursion($newArray, $item, $middle);
         }
-        return null;
     }
 }

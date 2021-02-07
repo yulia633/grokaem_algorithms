@@ -4,9 +4,8 @@ namespace App\Chapter7;
 
 class DijkstrasAlgorithm
 {
-    public function searchPath(array $graph, array $costs, array $parents)
+    public function searchPath(array $graph, array $costs, array $parents, $processed = [])
     {
-        $processed = [];
         [$node, $processed] = $this->findLowestCostNode($costs, $processed);
         while ($node !== null) {
             $cost = $costs[$node];

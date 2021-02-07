@@ -16,9 +16,8 @@ namespace App\Chapter6;
  */
 class BreadthFirstSearch
 {
-    public function search(array $graph, string $name, string $specialty)
+    public function search(array $graph, string $name, string $specialty, $searched = [])
     {
-        $searched = [];
         $queue = new \Ds\Queue();
         $queue->push(...$graph[$name]['person']);
 

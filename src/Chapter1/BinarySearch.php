@@ -14,9 +14,8 @@ class BinarySearch
      * иначе если названное число велико, то обновляется $high
      * Время выполнения: O(log n). Функция возвращает: bool | int
      */
-    public function binarySearch(array $arr, int $item)
+    public function binarySearch(array $arr, int $item, $low = 0)
     {
-        $low = 0;
         $high = count($arr) - 1;
 
         while ($low <= $high) {
