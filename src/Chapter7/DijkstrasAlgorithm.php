@@ -8,11 +8,10 @@ class DijkstrasAlgorithm
     {
         $processed = [];
         [$node, $processed] = $this->findLowestCostNode($costs, $processed);
-        
         while ($node !== null) {
             $cost = $costs[$node];
             $neighbors = $graph[$node];
-            foreach ($neighbors as $key => $neighbor) {            
+            foreach ($neighbors as $key => $neighbor) {
                 $newCost = $cost + $neighbor;
                 if ($newCost < $costs[$key]) {
                     $costs[$key] = $newCost;

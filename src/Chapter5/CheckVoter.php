@@ -17,6 +17,6 @@ class CheckVoter
         } else {
             $voted[$value] = true;
             return "let them vote";
-        }    
+        }
     }
 }

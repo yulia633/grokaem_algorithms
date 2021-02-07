@@ -3,16 +3,15 @@
 namespace Tests;
 
 use PHPUnit\Framework\TestCase;
-use App\Chapter5\CheckVoter;
+use App\Chapter4\QuickSort;
 
-class CheckVoterTest extends TestCase
+class QuickSortTest extends TestCase
 {
     public function addDataProvider()
     {
         return [
-            ['tom', 'let them vote'],
-            ['mike', 'let them vote'],
-            ['mike', 'kick them out'],
+            [[3, 2, 4, 1, 5], [1, 2, 3, 4, 5]],
+            [[3, 3, 1, 2, 9, 5, 7], [1, 2, 3, 3, 5, 7, 9]],
         ];
     }
 
@@ -21,9 +20,9 @@ class CheckVoterTest extends TestCase
      */
     public function testCheckVoter($list1, $expected)
     {
-        $obj = new CheckVoter();
+        $obj = new QuickSort();
 
-        $result = $obj->checkVoter($list1);
+        $result = $obj->quickSort($list1);
         $this->assertEquals($expected, $result);
     }
 }

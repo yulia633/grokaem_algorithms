@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Chapter4;
+
 /**
  * Алгоритм быстрой сортировки испольует стратегию "разделяй и властвуй".
  * Функция получает на вход массив. Алгоритм имеет базовый случай,
@@ -13,27 +15,28 @@
  * опорного элемента: в среднем случае, когда опорный элемент берется из середины
  * составляет O(log n), в лучшем - когда берется случайный элемент: O (n log n).
  */
-function quickSort(array $array)
+class QuickSort
 {
-    $lenght = count($array);
+    public function quickSort(array $array)
+    {
+        $lenght = count($array);
 
-    if ($lenght < 2) {
-        return $array;
-    }
-
-    $less = [];
-    $greater = [];
-    $pivot = $array[0];
-
-    for ($item = 1; $item < $lenght; $item += 1) {
-        if ($array[$item] < $pivot) {
-            $less[] = $array[$item];
-        } else {
-            $greater[] = $array[$item];
+        if ($lenght < 2) {
+            return $array;
         }
+
+        $less = [];
+        $greater = [];
+        $pivot = $array[0];
+
+        for ($item = 1; $item < $lenght; $item += 1) {
+            if ($array[$item] < $pivot) {
+                $less[] = $array[$item];
+            } else {
+                $greater[] = $array[$item];
+            }
+        }
+
+        return array_merge($this->quickSort($less), [$pivot], $this->quickSort($greater));
     }
-
-    return array_merge(quickSort($less), [$pivot], quickSort($greater));
 }
-
-print_r(quickSort([3, 3, 1, 2, 9, 5, 7]));
