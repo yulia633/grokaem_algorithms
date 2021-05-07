@@ -28,3 +28,4 @@
 * [Поиск в ширину](src/Chapter6/BreadthFirstSearch.php)
 * [Поиск кратчайшего пути во взвешенном графе с помощью алгоритма Дейкстры](src/Chapter7/DijkstrasAlgorithm.php)
 * [Поиск минимума в множестве с помощью жадного алгоритма](src/Chapter8/Greedy.php)
+* [Задача о рюкзаке с помощью динамического программирования](src/Chapter9/Knapsack.php)
