@@ -10,7 +10,7 @@ class Knapsack
      * Магнитофон - $3000, вес - 4 фунта. Ноутбук - $2000, вес - 3 фунта. Гитара - $1500, вес - 1 фунт.
      * Какие предметы следует положить в рюкзак, чтобы стоимость добычи была максимальной?
      */
-    public function knapsack($weights, $costs, $sizePack)
+    public function knapsack(array $weights, array $costs, int $sizePack)
     {
         //вычисляем шаг - это минимальный вес товара
         $step = min(...array_values($weights));
@@ -39,7 +39,7 @@ class Knapsack
                     }
                     // если предыдущий максимум есть
                     if ($previousMax) {
-                         // если ма стоимости ячейки больше стоимости предыдущего элемента
+                         // если максимум стоимости ячейки больше стоимости предыдущего элемента
                          // то добавляем вещь
                         if ($costMaxCell > $previousMax['cost']) {
                             $maxThings = $costOfRemainingSpace['things'] ?? null;
